@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAID SITE - Desenvolvimento Web Profissional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+
+        body { line-height: 1.6; background: linear-gradient(to right, rgb(9, 7, 73), black) #000000; color: #333; }
+        a { text-decoration: none; color: inherit; }
+        header { background:linear-gradient(to right, black, rgb(9, 7, 73)); color: #fff; padding: 20px 0; }
+        header nav { display: flex; justify-content: space-between; align-items: center; width: 90%; max-width: 1200px; margin: auto; }
+        header nav .logo { font-size: 1.8em; font-weight: bold; }
+        header nav ul { list-style: none; display: flex; gap: 20px; }
+        header nav ul li a { color: #fff; font-weight: 500; }
+        p{ color: rgb(255, 255, 255); font-family:Arial, Helvetica, sans-serif}
+
+        .hero { background: url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; height: 70vh; display: flex; justify-content: center; align-items: center; color: #fff; text-align: center; }
+        .hero h1 { font-size: 3em; margin-bottom: 20px; }
+        .hero p { font-size: 1.2em; }
+
+        section { width: 90%; max-width: 1200px; margin: 60px auto; }
+        section h2 { font-size: 2em; color: #1a73e8; margin-bottom: 20px; text-align: center; }
+        .services, .portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: #000000; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .card h3 { color: #1a73e8; margin-bottom: 10px; }
+        .card p { font-size: 0.95em; }
+
+        footer { background: #222; color: #fff; padding: 40px 20px; text-align: center; }
+        footer a { color: #1a73e8; }
+
+        form { display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: auto; }
+        input, textarea { padding: 12px; border-radius: 5px; border: 1px solid #ccc; width: 100%; font-size: 1em; }
+        button { padding: 12px; background: #1a73e8; color: #fff; font-size: 1em; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #155ab6; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">SAID SITE</div>
+            <ul>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div>
+            <h1>Desenvolvemos Sites Profissionais para o seu Negócio</h1>
+            <p>Agência digital angolana especializada em criação de sites modernos, responsivos e funcionais, garantindo presença digital de alto impacto.</p>
+            <p>Transforme sua presença digital com a SAID SITE – soluções modernas, rápidas e confiáveis.</p>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>Sobre Nós</h2>
+        <p>Agência digital angolana especializada em criação de sites modernos, responsivos e funcionais, garantindo presença digital de alto impacto.</p>
+        <p>Na <strong>SAID SITE</strong>, somos especialistas em criar e vender websites para empresas e empreendedores angolanos. Com foco em design moderno, usabilidade e performance, transformamos ideias em experiências digitais que conectam sua marca aos clientes certos.</p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <h2>Serviços</h2>
+        <div class="services">
+            <div class="card">
+                <h3>Criação de Sites</h3>
+                <p>Desenvolvemos sites modernos, responsivos e personalizados para sua empresa, garantindo presença digital profissional.</p>
+            </div>
+            <div class="card">
+                <h3>Loja Online</h3>
+                <p>Transforme seu negócio em e-commerce completo, com pagamentos seguros e gestão simples de produtos e clientes.</p>
+            </div>
+            <div class="card">
+                <h3>SEO & Marketing Digital</h3>
+                <p>Otimize seu site para motores de busca e aumente a visibilidade online, atraindo mais clientes e oportunidades.</p>
+            </div>
+            <div class="card">
+                <h3>Suporte & Manutenção</h3>
+                <p>Oferecemos suporte contínuo e atualizações para garantir que seu site esteja sempre seguro e funcionando perfeitamente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <div class="portfolio">
+            <div class="card">
+                <h3>Site Corporativo</h3>
+                <p>Exemplo de site corporativo para empresa angolana de consultoria, com design moderno e responsivo.</p>
+            </div>
+            <div class="card">
+                <h3>E-commerce</h3>
+                <p>Loja online funcional com integração de pagamentos e catálogo de produtos simples de gerenciar.</p>
+            </div>
+            <div class="card">
+                <h3>Blog Profissional</h3>
+                <p>Blog corporativo com foco em conteúdo de qualidade, SEO e interação com leitores.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contato</h2>
+        <p>Quer transformar sua presença online? Entre em contato para receber orçamento ou tirar dúvidas.</p>
+        <form>
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu email" required>
+            <textarea rows="5" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SAID SITE - Todos os direitos reservados | Angola</p>
+        <p>Desenvolvido por SAID SITE</p>
+    </footer>
+
+</body>
+</html>
