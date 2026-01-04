@@ -113,17 +113,38 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact">
-        <h2>Contato</h2>
-        <p>Quer transformar sua presença online? Entre em contato para receber orçamento ou tirar dúvidas.</p>
-        <form>
-           <form action="https://formspree.io/f/mdakyavj" method="POST" target="_blank">
-        <input type="text" name="name" placeholder="SEU NOME" required style="text-transform:uppercase;">
-        <input type="email" name="email" placeholder="SEU EMAIL" required>
-        <textarea name="message" placeholder="SUA MENSAGEM" required style="text-transform:uppercase;"></textarea>
-        <button type="submit">ENVIAR MENSAGEM</button>
+   <section id="contact">
+    <h2>Contato</h2>
+    <p>Quer transformar sua presença online? Entre em contato para receber orçamento ou tirar dúvidas.</p>
+
+    <form id="contact-form">
+        <input type="text" name="name" placeholder="Digite o seu nome" required style="text-transform:uppercase;">
+        <input type="email" name="email" placeholder="O seu Email" required>
+        <textarea name="message" placeholder="Deixe a sua mensagem para nós" required style="text-transform:uppercase;"></textarea>
+        <button type="submit">ENVIAR</button>
     </form>
-    </section>
+
+    <p id="form-status"></p>
+
+    <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("s4rTGdVSthMDdfL3O"); // substitua pelo seu User ID
+        })();
+
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', function(event){
+            event.preventDefault();
+            emailjs.sendForm("service_h0mhld3","template_ck60t3c", this)
+            .then(function(){
+                document.getElementById('form-status').innerText = "Mensagem enviada com sucesso!";
+                form.reset();
+            }, function(err){
+                document.getElementById('form-status').innerText = "Erro ao enviar: " + JSON.stringify(err);
+            });
+        });
+    </script>
+</section>
 
     <!-- Footer -->
     <footer>
